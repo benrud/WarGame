@@ -14,20 +14,23 @@ list($handComputer, $handPlayer) = array_chunk($cardsData, ceil(count($cardsData
 // echo "</pre>";
 
 echo "<h1>Computer Hand</h1>";
+
 $downCardsComputer = 1;
+
 foreach ($handComputer as $key => $card) {  
+  //hide cards until count equals3. 
   if (($downCardsComputer <= 3) ) {
     echo "<img src='/assets/cards/blue.png' width=70px>";
   } else {
     echo "<img src='/assets/cards/".$card['path']."' width=70px>";
   }
   $downCardsComputer++;
+  
+  //reset count.
     if($downCardsComputer > 4){
           $downCardsComputer = 1;
     }
 }
-
-
 
 echo "<h1>Player Hand</h1>";
 $downCardsPlayer = 1;
