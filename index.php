@@ -13,9 +13,6 @@ list($handComputer, $handPlayer) = array_chunk($cardsData, ceil(count($cardsData
 // var_dump($handComputer);
 // echo "</pre>";
 
-// echo "<pre>";
-// var_dump($handPlayer);
-// echo "</pre>";
 echo "<h1>Computer Hand</h1>";
 $downCardsComputer = 1;
 foreach ($handComputer as $key => $card) {  
